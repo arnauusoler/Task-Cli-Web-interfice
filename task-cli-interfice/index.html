@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Manager Web CLI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="Enter task Name" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="todo" class="filter-btn">To Do</button>
+      <button data-filter="in-progress" class="filter-btn">In Progress</button>
+      <button data-filter="done" class="filter-btn">Done</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div id="updateSection" style="display:none; margin-top: 20px;">
+      <h3>Update Task</h3>
+      <input type="text" id="updateInput" placeholder="New description" />
+      <button id="updateBtn">Update</button>
+      <button id="cancelUpdateBtn">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
